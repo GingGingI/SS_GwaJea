@@ -42,6 +42,17 @@
             android:textColor="#FFF"
             android:onClick="onClick"/>
 
+        <Button
+            android:id="@+id/btn2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00e63a"
+            android:text="Time Attack Plus"
+            android:textSize="50dp"
+            android:textColor="#FFF"
+            android:onClick="onClick"/>
+
     </LinearLayout>
 
 </LinearLayout>
