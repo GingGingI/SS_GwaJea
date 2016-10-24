@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a302.baktoebak.MainActivity">
+     <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+         android:orientation="vertical">
+    <TextView
+        android:id="@+id/num"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="0" />
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#888">
+        <Button
+            android:id="@+id/Btnm"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/Btnp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onClick"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/Timmeer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+         android:text="Time : "/>
+</RelativeLayout>
