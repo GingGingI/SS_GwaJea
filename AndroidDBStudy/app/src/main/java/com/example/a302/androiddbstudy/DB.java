@@ -16,22 +16,25 @@ public class DB extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         //새로운 테이블 생성
-        db.execSQL("CREATE TABLE TOUCH (_id INTEGER PRIMARY KEY AUTOINCREMENT, Touch INTEGER)");
+        String sql = "create table dbs("+
+                "_id integer primary key autoincrement, "+
+                "name text, "+
+                "age Integer, "+
+                "address text)";
+
+        db.execSQL(sql);
     }
 
     // DB업그레이드를 위해 버전이 변경될 때 호출되는 함수
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    // db = 적용할 db, old/new 구버전/신버전
+    // db 버전이 업그레이드 되었을 때 실행되는 메소드
 
+        String sql = "drop table if exists student";
+        db.execSQL(sql);
+
+        onCreate(db);
     }
-
-    public void insert(int Touch){
-        //DB읽기
-        SQLiteDatabase db = getWritableDatabase();
-        //입력한 값으로 행 추가
-        db.execSQL("INSERT INTO TOUCH VALUES(null, '" + Touch +"');");
-        db.close();
-    }
-
     
 }
