@@ -3,7 +3,6 @@ package com.example.a302.androiddbstudy;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.provider.Contacts;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     SQLiteDatabase db;
     DB DataBase;
-
+//http://blog.naver.com/tinatan/70176627062
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void select(){
-
         // db의 데이터를 읽어와서, 결과저장 , 해당 데이터를 꺼내 사용
 
         db = DataBase.getWritableDatabase();
